@@ -35,7 +35,8 @@
 /**
  * @file    main.c
  * @brief   Hello World!
- * @details This example uses the UART to print to a terminal and flashes an LED.
+ *
+ * @details This example uses the UART to print to a terminal and flashes an LED(P1.14).
  */
 
 /***** Includes *****/
@@ -43,12 +44,10 @@
 #include <stdint.h>
 #include "mxc_device.h"
 #include "led.h"
-#include "pb.h"
 #include "board.h"
 #include "mxc_delay.h"
 
 /***** Definitions *****/
-#define LED 0 // LED to flash.  We default to '0', since LED driver definitions may vary across micros.
 
 /***** Globals *****/
 
@@ -58,14 +57,15 @@
 int main(void)
 {
     int count = 0;
-    
-    printf("Hello World!\n");
+    printf("\n***********Hello World!***********\n");
+    printf("\nLED1 on P1.14 toggles every 500 ms\n");
 
     while (1) {
-        LED_On(LED);
+        LED_On(0);
         MXC_Delay(500000);
-        LED_Off(LED);
+        LED_Off(0);
         MXC_Delay(500000);
-        printf("count = %d\n", count++);
+
+        printf("\nCount = %d", count++);
     }
 }
