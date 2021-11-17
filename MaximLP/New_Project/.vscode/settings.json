@@ -6,7 +6,7 @@
         "Path":"${config:MAXIM_PATH}/Toolchain/bin:${config:MAXIM_PATH}/Toolchain/msys/1.0/bin:${env:PATH}"
     },
 
-    "MAXIM_PATH":"/Users/angel/Maxim", //<-- This is the root installation directory of the Maxim Micros Toolchain.  Change this if you used a non-default installation location.
+    "MAXIM_PATH":"${env:HOME}/Maxim", //<-- This is the root installation directory of the Maxim Micros Toolchain.  Change this if you used a non-default installation location.
 
     "target":"MAX32665",/*<-- Change to the correct target micro.
     Options :
