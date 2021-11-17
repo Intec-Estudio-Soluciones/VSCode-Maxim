@@ -1,8 +1,8 @@
 {
     "configurations": [
         {
-            "name": "Win32",
-            "includePath": [                
+            "name": "Mac",
+            "includePath": [
                 "${workspaceFolder}/**",
                 "${config:MAXIM_PATH}/Firmware/${config:target}/Libraries/${config:target}PeriphDriver/Include",
                 "${config:MAXIM_PATH}/Firmware/${config:target}/Libraries/Boards/Include",
@@ -15,7 +15,7 @@
             "defines": [
             ],
             "intelliSenseMode": "gcc-arm",
-            "compilerPath": "${config:MAXIM_PATH}/Toolchain/bin/arm-none-eabi-gcc.exe",
+            "compilerPath": "${config:MAXIM_PATH}/Toolchain/bin/arm-none-eabi-gcc",
             "browse": {
                 "path": [
                     "${config:MAXIM_PATH}/Firmware/${config:target}/Libraries/${config:target}PeriphDriver/Source",

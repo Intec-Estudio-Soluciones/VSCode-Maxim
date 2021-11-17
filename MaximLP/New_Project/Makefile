@@ -47,7 +47,7 @@ IPATH += ./src
 # Set compiler flags
 PROJ_CFLAGS+=-Wall # Enable warnings
 
-# Set compiler optimization level  
+# Set compiler optimization level
 MXC_OPTIMIZE=-Og
 
  ###############################################################################
@@ -74,14 +74,14 @@ COMPILER=GCC
 
 # Default board used.  This is overridden in settings.json
 ifeq "$(BOARD)" ""
-BOARD=EvKit_V1
+BOARD=FTHR
 endif
 
 # This is the path to the CMSIS root directory
 ifeq "$(MAXIM_PATH)" ""
 LIBS_DIR=../../../Libraries
 else
-LIBS_DIR=/$(subst \,/,$(subst :,,$(MAXIM_PATH))/Firmware/$(TARGET_UC)/Libraries)
+LIBS_DIR=$(subst \,/,$(subst :,,$(MAXIM_PATH))/Firmware/$(TARGET_UC)/Libraries)
 endif
 CMSIS_ROOT=$(LIBS_DIR)/CMSIS
 
@@ -104,7 +104,7 @@ endif
 IPATH += .
 
 # Enable assertion checking for development
-PROJ_CFLAGS+=-DMXC_ASSERT_ENABLE 
+PROJ_CFLAGS+=-DMXC_ASSERT_ENABLE
 
 # Specify the target revision to override default
 # "A2" in ASCII
