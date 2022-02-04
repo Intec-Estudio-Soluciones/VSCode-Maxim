@@ -13,5 +13,5 @@
 
     "board":"FTHR",
 
-    "debugger":"max32625_pico",
+    "debugger":"cmsis-dap",
 }
